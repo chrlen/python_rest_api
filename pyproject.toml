@@ -1,0 +1,30 @@
+[tool.poetry]
+name = "python-rest-api"
+version = "0.1.0"
+description = ""
+authors = ["Christian Lengert <christian.lengert@tuta.io>"]
+readme = "README.md"
+packages = [{include = "python_rest_api", from = "src"}]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+fastapi = "^0.111.0"
+mongoengine = "^0.28.2"
+
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.4.3"
+pylint = "^3.1.0"
+ipython = "^8.24.0"
+setuptools = "^69.5.1"
+
+
+[tool.poetry.group.test.dependencies]
+pytest = "^8.2.0"
+pytest-async = "^0.1.1"
+testcontainers = "^4.4.0"
+testcontainers-mongodb = "^0.0.1rc1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
